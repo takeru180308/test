@@ -1,0 +1,82 @@
+/* グーグルフォント */
+.kosugi-maru-regular {
+  font-family: "Kosugi Maru", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+/******* ここからフッターのスタイル ********/
+footer {
+    background: #CCC; 
+    padding: 1em;
+    margin-top: 100px;
+}
+
+footer p {
+    font-size: .8em;
+    color: #fff;
+    max-width: 800px;
+    padding: 0;
+    text-align:center;
+    margin:0 auto;
+    font-weight:bold;
+}
+
+/* SNSアイコン */
+.description {
+  width: 100%;
+  height: 17px;
+  padding-right: 12px;
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+
+.description p {
+  font-size: 13px;
+  color: dimgray;
+}
+
+.sns-container {
+    display: flex;         /* 横並びにする */
+    width: 100%;           /* 全幅に広げる */
+    max-width: 800px;      /* 必要に応じて最大幅を制限（任意） */
+    margin: 0 auto;
+}
+
+.sns-container a {
+    flex: 1;               /* すべてのボタンを均等な幅にする */
+    display: flex;
+    justify-content: center; /* アイコンを中央に（横） */
+    align-items: center;     /* アイコンを中央に（縦） */
+    height: 60px;          /* ボタンの高さ */
+    transition: opacity 0.3s;
+}
+
+.sns-container a:hover {
+    opacity: 0.8;          /* マウスを乗せた時に少し薄くする */
+}
+
+/* アイコン画像自体のサイズ調整 */
+.sns-container img {
+    width: 30px;           /* アイコンの大きさ */
+    height: auto;
+   
+} 
+
+/* 各ブランドの背景色 */
+.btn-youtube { background-color: burlywood; } /* YouTubeレッド */
+.btn-x       { background-color: yellowgreen; } /* X(Twitter)ブラック */
+.btn-insta   { background-color: skyblue; } /* インスタ（代表色） */
+
+/* 縦書き */
+  .textbox {
+        position: absolute;
+        right: 50%;
+    }
+    .vertical {
+        writing-mode: vertical-rl;
+        text-orientation: upright;
+    }
+
+    
