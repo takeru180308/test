@@ -1,0 +1,330 @@
+.yuji-boku-regular {
+  font-family: "Yuji Boku", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+body {
+    font-family: 'Yuji Boku', cursive;
+    padding-top: 60px; /* ヘッダーの高さ分の余白をいれ、うしろの要素が隠れないようにする */
+}
+
+/******* ヘッダーのスタイル ********/
+header {
+    position: fixed; /*** ← fixedで固定 ***/
+    width: 100%; 
+    height: 60px; 
+    background: #CCC; 
+    padding: 20px 60px; 
+    box-sizing: border-box;
+    top: 0; 
+    left: 0; 
+    display: flex; 
+    align-items: center; 
+    z-index: 100;
+    
+  
+   /* ロゴとメニューを横並びにする */
+    display: flex; 
+    justify-content:space-between;
+}
+
+header .nav .menu {
+    display: flex; 
+}
+
+header .nav .menu li {
+    list-style: none; 
+    margin-left: 40px;
+}
+
+header .nav .menu li a{
+   color: #B78D4A;
+   font-weight:bold;
+   text-decoration: none;
+}
+
+/******* ここからメインエリアのスタイル ********/
+main {
+    text-align:center;
+}
+
+h2 {
+   color: #B78D4A;
+   text-decoration: none;
+   padding-top: 100px;
+}
+
+/******* ここからフッターのスタイル ********/
+footer {
+    background: #CCC; 
+    padding: 1em;
+    margin-top: 100px;
+}
+
+footer p {
+    font-size: .8em;
+    color: #fff;
+    max-width: 800px;
+    padding: 0;
+    text-align:center;
+    margin:0 auto;
+    font-weight:bold;
+}
+
+/* 年代表 */
+.dlBlock {
+  position: relative;
+}
+ 
+.dlBlock:before {
+  position: absolute;
+  display: block;
+  content: "";
+  background: #ccc;
+  width: 1px;
+  height: 100%;
+  z-index: -1;
+}
+ 
+.dlBlock .dlInner {
+  display: flex;
+  align-items: flex-start;/*なくても問題ない？？*/
+}
+ 
+.dlBlock dt {
+  position: relative;
+  color: #1b2680;
+  line-height: 1;
+  box-sizing: border-box;
+  word-break: break-all;
+}
+ 
+.dlBlock dt:before {
+  position: absolute;
+  display: block;
+  content: "";
+  top: .5em;
+  right: 0;
+  width: 7px;
+  height: 7px;
+  background: #1b2680;
+  border-radius: 50%;
+  transform: translateY(-50%);
+}
+ 
+.dlBlock dd {
+  line-height: 1.5;
+  flex: 1;
+}
+ 
+@media only screen and (min-width: 769px), print {
+  .dlBlock:before {
+    top: 12px;
+    left: 96px;
+  }
+  .dlBlock .dlInner {
+    padding-bottom: 40px;
+  }
+  .dlBlock dt {
+    width: 100px;
+    padding-right: 15px;
+    font-size: 26px;
+  }
+  .dlBlock dd {
+    margin-left: 50px;
+    font-size: 16px;
+  }
+}
+
+/* 自己写真 */
+.image {
+	
+    width: 100%;
+    max-width: 800px; /* ← 好きなサイズにする */
+    height: auto;
+    display: block;
+    position: relative;
+    margin: 0 auto;  
+}
+
+.image::before,
+.image::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-style: solid;
+}
+
+.image::before {
+	top: -15px;
+	right: -15px;
+	border-width: 0 100px 100px 0;
+	border-color: transparent #053e62 transparent transparent;
+}
+
+.image::after {
+	bottom: -15px;
+	left: -15px;
+	border-width: 100px 0 0 100px;
+	border-color: transparent transparent transparent #053e62;
+}
+
+.right {
+    text-align: right;
+}
+
+/* 写真カード */
+#cards {
+  display: flex;
+  justify-content: center;
+}
+
+.card {
+  width: 300px;
+  height: 300px;
+  border: 1px solid lightgray;
+}
+
+.card:nth-child(2) {
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.picture img {
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.description {
+  width: 100%;
+  height: 17px;
+  padding-right: 12px;
+  padding-left: 12px;
+  box-sizing: border-box;
+}
+
+.description p {
+  font-size: 13px;
+  color: dimgray;
+}
+
+.sns-container {
+    display: flex;         /* 横並びにする */
+    width: 100%;           /* 全幅に広げる */
+    max-width: 800px;      /* 必要に応じて最大幅を制限（任意） */
+    margin: 0 auto;
+}
+
+.sns-container a {
+    flex: 1;               /* すべてのボタンを均等な幅にする */
+    display: flex;
+    justify-content: center; /* アイコンを中央に（横） */
+    align-items: center;     /* アイコンを中央に（縦） */
+    height: 60px;          /* ボタンの高さ */
+    transition: opacity 0.3s;
+}
+
+.sns-container a:hover {
+    opacity: 0.8;          /* マウスを乗せた時に少し薄くする */
+}
+
+/* アイコン画像自体のサイズ調整 */
+.sns-container img {
+    width: 30px;           /* アイコンの大きさ */
+    height: auto;
+   
+} 
+
+/* 各ブランドの背景色 */
+.btn-youtube { background-color: burlywood; } /* YouTubeレッド */
+.btn-x       { background-color: yellowgreen; } /* X(Twitter)ブラック */
+.btn-insta   { background-color: skyblue; } /* インスタ（代表色） */
+
+#introduce {
+    
+    background-color: rgba(218, 165, 32, 0.6);
+    color: #fff;              /* 文字を白に */
+    padding: 80px 0;          /* 上下の余白（好みで調整） */
+}
+
+#editor {
+    background-color: #000;   /* 黒背景 */
+    color: #fff;              /* 文字を白に */
+    padding: 80px 0;          /* 上下の余白（好みで調整） */
+}
+
+#CG {
+    background-color: white;   /* 黒背景 */
+    color: #fff;              /* 文字を白に */
+    padding: 80px 0;          /* 上下の余白（好みで調整） */
+}
+
+#東京GAMESHOW2024 {
+    background-color: skyblue;   /* 黒背景 */
+    color: #fff;              /* 文字を白に */
+    padding: 80px 0;          /* 上下の余白（好みで調整） */
+}
+
+/* 横に流れる画像 */
+@keyframes infinity-scroll-left {
+from {
+  transform: translateX(0);
+}
+  to {
+  transform: translateX(-100%);
+}
+}
+.scroll-infinity__wrap {
+  display: flex;
+  overflow: hidden;
+}
+.scroll-infinity__list {
+  display: flex;
+  list-style: none;
+  padding: 0
+}
+.scroll-infinity__list--left {
+  animation: infinity-scroll-left 80s infinite linear 0.5s both;
+}
+.scroll-infinity__item {
+  width: calc(100vw / 3);
+}
+.scroll-infinity__item>img {
+  width: 100%;
+}
+
+.left{
+  position: relative;
+  color: #333;
+  display: inline-block;
+  margin: 47px 0;
+  text-shadow: 0 0 2px white;
+}
+
+.left::before{
+  content: "";
+  position: absolute;
+  background: yellow;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: 50%;
+  border: dashed 1px white;
+  left: 50%;
+  -webkit-transform: translate(-50%,-50%);
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  box-shadow: 0px 0px 0px 5px #a9e1ff;
+}
+
