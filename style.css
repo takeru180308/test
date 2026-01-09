@@ -328,3 +328,81 @@ from {
   box-shadow: 0px 0px 0px 5px #a9e1ff;
 }
 
+/* --- 画面幅が768px以下のときだけ適用される設定 --- */
+@media screen and (max-width: 768px) {
+    
+    /* 1. 無限ループ画像の高さをスマホサイズに */
+    .scroll-infinity__item img {
+        height: 80px; 
+        width: auto;
+    }
+
+    /* 2. メニューを折り返し可能にする */
+    .menu {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0;
+    }
+
+    /* 3. 作品カード（editor/CG）を縦1列に並べる */
+    #cards {
+        display: flex;
+        flex-direction: column; /* 縦並びに変更 */
+        align-items: center;
+    }
+
+    .card {
+        width: 90% !important;   /* 横幅を画面に合わせる */
+        height: auto !important; /* ←【重要】高さを固定せず、中身に合わせる */
+        margin: 0 auto 30px auto !important; /* カードの下に余白を作る */
+        padding-bottom: 20px;    /* ボタンの下に少し余白を作る */
+    }
+
+    /* 4. 画像のサイズ調整 */
+    .picture img {
+        width: 100%;
+        height: auto; /* 高さを自動にして比率を保つ */
+    }
+
+    /* 5. 画像が画面からはみ出さないようにする */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* 6. 経歴（dlInner）を縦並びに */
+    .dlInner {
+        display: block;
+        margin-bottom: 15px;
+        text-align: left; /* 左寄せにすると見やすいです */
+    }
+
+    /* ヘッダー全体の調整 */
+    header {
+        padding: 10px 15px !important; /* 左右の余白を60pxから15pxに減らす */
+        height: auto !important;        /* 高さを60px固定から、中身に合わせる形に変更 */
+        flex-direction: column;         /* タイトルとメニューを上下2段に分ける */
+        gap: 10px;                      /* タイトルとメニューの間に少し隙間を作る */
+    }
+
+    header h1 {
+        font-size: 1.2rem;              /* タイトルの文字を少し小さく */
+        margin: 0;
+    }
+
+    /* メニュー（ナビゲーション）の調整 */
+    header .nav .menu {
+        justify-content: center;        /* メニューを中央に寄せる */
+        gap: 10px;                      /* リンク同士の隙間を調整 */
+    }
+
+    header .nav .menu li {
+        margin-left: 0 !important;      /* PC用の広い左余白を消す */
+        font-size: 0.8rem;              /* メニューの文字を少し小さく */
+    }
+
+    /* bodyの余白調整（ヘッダーが2段になって高さが増す分、メインが隠れないように） */
+    body {
+        padding-top: 100px !important; 
+    }
+}
