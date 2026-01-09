@@ -405,4 +405,34 @@ from {
     body {
         padding-top: 100px !important; 
     }
+
+    /* フッター全体の調整 */
+    footer {
+        position: static !important; /* 固定を解除して、ページの最後に配置 */
+        width: 100% !important;
+        padding: 20px 0 !important;   /* 左右の余白をなくす */
+        margin-top: 50px;
+    }
+
+    /* SNSボタンのコンテナを画面内に収める */
+    .sns-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        display: flex;
+        justify-content: center; /* 中央寄せ */
+    }
+
+    /* アイコンの調整 */
+    .sns-container a {
+        height: 50px !important; /* スマホでは少し高さを抑える */
+    }
+
+    /* コピーライト（©2026）の調整 */
+    footer p {
+        width: 100% !important;
+        text-align: center !important;
+        padding: 10px 0 !important;
+        margin: 0 auto !important;
+    }
+}
 }
