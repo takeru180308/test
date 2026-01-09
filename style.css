@@ -434,5 +434,46 @@ from {
         padding: 10px 0 !important;
         margin: 0 auto !important;
     }
+
+    /* 1. 年代表全体の余白調整 */
+    .dlBlock {
+        padding: 0 20px;
+        text-align: left; /* 左寄せにして読みやすくする */
+    }
+
+    /* 2. 縦のラインの位置を調整 */
+    .dlBlock:before {
+        left: 10px; /* ラインを左端に寄せる */
+    }
+
+    /* 3. 各項目を縦並びにする */
+    .dlBlock .dlInner {
+        display: block;    /* 横並びを解除 */
+        padding-left: 30px; /* ラインの分だけ左に余白を作る */
+        padding-bottom: 30px;
+        position: relative;
+    }
+
+    /* 4. 日付（dt）の調整 */
+    .dlBlock dt {
+        width: auto;
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+        padding-right: 0;
+    }
+
+    /* 5. 青い丸の位置を調整 */
+    .dlBlock dt:before {
+        top: 0.6em;
+        left: -24px; /* ラインの上に丸が来るように調整 */
+        right: auto;
+    }
+
+    /* 6. 説明文（dd）の調整 */
+    .dlBlock dd {
+        margin-left: 0;
+        font-size: 0.95rem;
+        color: #333;
+    }
 }
 
