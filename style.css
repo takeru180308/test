@@ -13,6 +13,12 @@ footer {
 body {
     font-family: 'Yuji Boku', cursive;
     padding-top: 60px; /* ヘッダーの高さ分の余白をいれ、うしろの要素が隠れないようにする */
+
+    /* 背景画像 */
+    background-image: url("images/background.jpg");
+    background-repeat: repeat;      /* ← 繰り返し */
+    background-size: 1500px 1200px;          /* ← 原寸でタイル */
+    background-position: top left;
 }
 
 /******* ヘッダーのスタイル ********/
@@ -259,19 +265,23 @@ footer p {
 }
 
 #editor {
-    background-color: #000;   /* 黒背景 */
-    color: #fff;              /* 文字を白に */
+  background-color: rgba(0, 0, 0, 0.6);
+    
+    color: #cd3d55;              /* 文字を白に */
     padding: 80px 0;          /* 上下の余白（好みで調整） */
 }
 
 #CG {
-    background-color: white;   /* 黒背景 */
+  background-color: rgba(227, 87, 84, 0.6);
+  
+    
     color: #fff;              /* 文字を白に */
     padding: 80px 0;          /* 上下の余白（好みで調整） */
 }
 
 #東京GAMESHOW2024 {
-    background-color: skyblue;   /* 黒背景 */
+  background-color: rgba(135, 206, 235, 0.6);
+    
     color: #fff;              /* 文字を白に */
     padding: 80px 0;          /* 上下の余白（好みで調整） */
 }
@@ -326,6 +336,21 @@ from {
   transform: translate(-50%,-50%);
   z-index: -1;
   box-shadow: 0px 0px 0px 5px #a9e1ff;
+}
+
+.gradation{
+    display: inline-block; /* これが重要 */
+    padding: 0.8rem 0 0;
+    margin-bottom: 0.2rem;
+
+    background-image: linear-gradient(135deg, #F0FF00 10%, #58CFFB 100%);
+    background-repeat: no-repeat;
+    background-size: 100% 13px;
+    background-position: bottom;
+
+    color: #353535;
+    font-weight: bold;
+    font-size: 26px;
 }
 
 /* --- 画面幅が768px以下のときだけ適用される設定 --- */
