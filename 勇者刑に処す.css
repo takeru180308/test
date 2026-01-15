@@ -316,3 +316,80 @@ footer p {
 .btn-youtube { background-color: burlywood; } /* YouTubeレッド */
 .btn-x       { background-color: yellowgreen; } /* X(Twitter)ブラック */
 .btn-insta   { background-color: skyblue; } /* インスタ（代表色） */
+
+
+.watch-btn {
+    background: linear-gradient(90deg, #b18309 0%, #cfa836 50%, #b18309 100%);
+    color: #ffffff;
+    border-radius: 50vh;
+    padding: 1em 2em 0.8em;
+    display: inline-block;
+    margin-top: 10px;
+    text-decoration: none;
+}
+
+.sns-icons {
+    margin-top: 15px;
+}
+
+.sns-icons img {
+    width: 60px;
+    height: 60px;
+    margin: 0 8px;
+    cursor: pointer;
+}
+
+.watch-btn {
+    background: linear-gradient(90deg, #b18309 0%, #cfa836 50%, #b18309 100%);
+    color: #ffffff;
+    border-radius: 50vh;
+    padding: 1em 2em 0.8em;
+    line-height: 1;
+    display: inline-block;
+    text-decoration: none;
+}
+
+.down-arrow {
+    margin-top: 10px;
+    font-size: 24px;
+    color: #b18309;
+    animation: bounce 1.5s infinite;
+}
+
+/* ふわっと上下するアニメーション */
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(8px);
+    }
+}
+
+h2 {
+    padding: 0.2rem;
+    margin-bottom: 0.2rem;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+}
+
+h2 span1 {
+    background: linear-gradient(transparent 60%, #16b5dd 60%);
+}
+
+h2 span2 {
+    background: linear-gradient(transparent 60%, red 60%);
+}
+
+h2 span3 {
+    background: linear-gradient(transparent 60%, gold 60%);
+}
+
+h2 span4 {
+    background: linear-gradient(transparent 60%, green 60%);
+}
+
+h2 span5 {
+    background: linear-gradient(transparent 60%, silver 60%);
+}
